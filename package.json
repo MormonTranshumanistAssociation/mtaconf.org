@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "aws s3 cp ./dist s3://www.mtaconf.org/ --recursive && aws cloudfront create-invalidation --distribution-id E1B691YPW33N78 --paths '/'"
+    "deploy": "aws s3 cp ./dist s3://www.mtaconf.org/ --profile mta --recursive && aws cloudfront create-invalidation --profile mta --distribution-id E1B691YPW33N78 --paths '/'"
   },
   "author": "",
   "license": "ISC",
